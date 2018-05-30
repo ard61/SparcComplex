@@ -19,7 +19,7 @@ class SparcQpsk:
         self.sqrtnPl = np.sqrt(self.p.n * self.p.Palloc)
 
         # Optimal modulation constants
-        self.a = np.exp(2 * np.pi * 1j * np.array(range(p.K)) / p.K)
+        self.a = np.exp(2 * np.pi * 1j * np.array(range(self.p.K)) / self.p.K)
         self.a = self.sqrtnPl.reshape(self.p.L, 1).repeat(self.p.K, axis=1) * self.a.reshape(1, self.p.K).repeat(self.p.L, axis=0)
         #print(self.a)
         assert(self.a.shape == (self.p.L, self.p.K))

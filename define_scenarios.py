@@ -8,7 +8,7 @@ R_per_Ds = np.array([1, 1.5])               # Rate per dimension R/D
 R_pa_per_Ds = np.array([0, 1.05]) * R_per_Ds      # Power allocation rate per dimension R_pa/D
 L = 1024
 logK = 0
-logKMs = np.array([9])
+logKMs = np.array([9, 10])
 
 # Channel powers at which we will test the SPARCs for each rate
 ebn0s = np.stack([

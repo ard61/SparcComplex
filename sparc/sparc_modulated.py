@@ -123,7 +123,7 @@ if __name__ == "__main__":
     R_pa = 1.1 * R
 
     L = 1024
-    logK = 1
+    logK = 2
     logM = 10
 
     Palloc = sp.iterative_power_alloc(P_total, L, R_pa)

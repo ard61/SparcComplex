@@ -39,7 +39,7 @@ def simulate(sparc_params, num_trials):
 
     sparc_params_json = sparc_params.to_json()
     
-    num_machines = 140
+    num_machines = 40
     quotient = num_trials // num_machines
     remainder = num_trials - num_machines * quotient
     trial_alloc = [quotient + 1] * remainder + [quotient] * (num_machines - remainder)

@@ -8,15 +8,6 @@ import sparc
 import simulate
 from define_scenarios import *
 
-#p_K1D1
-#p_K2D1
-#p_K4D1
-#p_K4D2
-#p_K8D2
-#p_K16D2
-
-num_trials_increment = 420
-
 scenario_inds = [index for index in np.ndindex(scenarios.shape)]
 
 # Initialise data points list
@@ -32,7 +23,8 @@ if not os.path.exists(results_dir):
 # Gather data
 start_index = (0, 0, 0, 0)  # Change this to resume from partially-interrupted simulations
 
-max_trials = 420  # For robust results at high SNR, will need to be much larger
+max_trials = 400  # For robust results at high SNR, will need to be much larger
+num_trials_increment = 400
 for index in scenario_inds[scenario_inds.index(start_index):]:
     print('Scenario index: {}'.format(index))
     print(scenarios[index])
